@@ -3,7 +3,7 @@ Upstream-Name: tidy-html5
 Source: https://github.com/htacg/tidy-html5/releases
 
 Files: *
-Copyright: 1998-2016 World Wide Web Consortium
+Copyright: 1998-2017 World Wide Web Consortium
 License: tidy
 Comment:
  (Massachusetts Institute of Technology, European Research Consortium for
