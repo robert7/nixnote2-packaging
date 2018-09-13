@@ -1,9 +1,17 @@
 #!/bin/bash
 
+CDIR=`pwd`
+echo Current dir: $CDIR
 DEV_DIR=`dirname $0`
-. ${DEV_DIR}/common-include.sh
+cd ${DEV_DIR}/..
+PROJ_DIR=`pwd`
+echo Project dir: $PROJ_DIR
+. ${PROJ_DIR}/development/common-include.sh
+
 
 ./development/clean.sh
 
 git-build-recipe --allow-fallback-to-native --distribution bionic ./tidy-html5/launchpad-recipe build-tidy-html5
+
+cd $CDIR
 

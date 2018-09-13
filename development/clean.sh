@@ -5,7 +5,7 @@ DEV_DIR=`dirname $0`
 
 for i in build* ; do
   if [ -d $i ] ; then
-     echo clean: removing directory $i
+     echo Clean: removing directory $i
      rm -rf $i || error_exit "rm directory \"$i\""
   fi
   if [ -f $i ] ; then
@@ -14,4 +14,4 @@ for i in build* ; do
   fi
 done
 
-echo clean OK
+echo Clean: OK
