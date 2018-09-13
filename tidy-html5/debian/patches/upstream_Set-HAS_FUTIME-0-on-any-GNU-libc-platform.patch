@@ -1,0 +1,27 @@
+From 27143cc88e1d7cda7f08bdc4d78ce68dabf7575c Mon Sep 17 00:00:00 2001
+From: Pino Toscano <toscano.pino@tiscali.it>
+Date: Fri, 24 Jun 2016 23:45:10 +0200
+Subject: [PATCH] Set HAS_FUTIME=0 on any GNU libc platform
+
+GNU libc does not have <sys/utime.h> but <utime.h>, so set HAS_FUTIME=0
+for it; fixes build on non-Linux platforms using GNU libc.
+---
+ include/tidyplatform.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/include/tidyplatform.h b/include/tidyplatform.h
+index a36039f..d69c0c7 100644
+--- a/include/tidyplatform.h
++++ b/include/tidyplatform.h
+@@ -406,7 +406,7 @@ extern "C" {
+ #if PRESERVE_FILE_TIMES
+ 
+ #ifndef HAS_FUTIME
+-#if defined(CYGWIN_OS) || defined(BE_OS) || defined(OS2_OS) || defined(HPUX_OS) || defined(SOLARIS_OS) || defined(LINUX_OS) || defined(BSD_BASED_OS) || defined(MAC_OS) || defined(__MSL__) || defined(IRIX_OS) || defined(AIX_OS) || defined(__BORLANDC__)
++#if defined(CYGWIN_OS) || defined(BE_OS) || defined(OS2_OS) || defined(HPUX_OS) || defined(SOLARIS_OS) || defined(LINUX_OS) || defined(BSD_BASED_OS) || defined(MAC_OS) || defined(__MSL__) || defined(IRIX_OS) || defined(AIX_OS) || defined(__BORLANDC__) || defined(__GLIBC__)
+ #define HAS_FUTIME 0
+ #else
+ #define HAS_FUTIME 1
+-- 
+2.8.1
+
