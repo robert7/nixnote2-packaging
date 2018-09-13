@@ -12,3 +12,11 @@ override_dh_auto_configure:
 		-DTIDY_COMPAT_HEADERS:BOOL=YES \
 		-DTIDY_CONFIG_FILE:STRING=/etc/tidy.conf \
 		-DTIDY_USER_CONFIG_FILE:STRING=~/.tidyrc \
+
+
+override_dh_installchangelogs:
+	echo override_dh_installchangelogs
+
+override_dh_installdocs:
+	echo override_dh_installdocs
+

@@ -1,2 +1,3 @@
 debian/changelog /opt/tidy56/doc/
+debian/copyright /opt/tidy56/doc/
 usr/lib/libtidy.so* /opt/tidy56/lib/
