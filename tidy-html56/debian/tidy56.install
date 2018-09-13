@@ -1,2 +1,3 @@
 debian/changelog /opt/tidy56/doc/
 usr/bin/tidy /opt/tidy56/bin/
+debian/tidy.conf /opt/tidy56/etc/
