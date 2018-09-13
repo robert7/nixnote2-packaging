@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# this is test run for debian "rules"
+# this is approximation of test run for debian "rules"
 # convenience helper only
 # its not really exact, but may catch some mistakes
 # it must be run *after* running recipe & any local changes must be copied manually
@@ -15,8 +15,9 @@ echo Project dir: $PROJ_DIR
 
 cd build-tidy-html5/launchpad-recipe
 
-dh clean --without=build-stamp || error_exit "dh clean"
-dh build-arch --without=build-stamp 
+dh clean --without=build-stamp                        || error_exit "dh clean"
+dh build-arch --without=build-stamp                   || error_exit "dh build-arch"
+fakeroot dh install-arch --without=build-stamp        || error_exit "dh install-arch"
 
 cd $CDIR
 

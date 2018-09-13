@@ -3,6 +3,7 @@
 export DEB_BUILD_MAINT_OPTIONS=hardening=+all
 
 %:
+	echo -------- dh $@
 	dh $@ --parallel
 
 override_dh_auto_configure:
