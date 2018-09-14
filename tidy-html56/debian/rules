@@ -16,8 +16,9 @@ override_dh_auto_configure:
 		-DCMAKE_LIBRARY_PATH=/opt/tidy56 \
 		-DCMAKE_PREFIX_PATH=/opt/tidy56 \
 		-DCMAKE_INSTALL_RPATH=/opt/tidy56/lib 
-		#-DBUILD_WITH_INSTALL_RPATH=true
-		#-DCMAKE_SKIP_RPATH=ON
+
+#-DBUILD_WITH_INSTALL_RPATH=true
+#-DCMAKE_SKIP_RPATH=ON
 
 
 override_dh_installchangelogs:
@@ -29,10 +30,8 @@ override_dh_installdocs:
 
 override_dh_auto_install:
 	echo -1------override_dh_auto_install
-	dh_auto_install
-	echo -2------override_dh_auto_install
-	#pwd
-	#ls
-	#mkdir -p debian/opt/tidy56
-	#cp tidy debian/opt/tidy56
+	dh_auto_install	
+	cp debian/_extra/README.txt /opt/tidy56/	
+	cp debian/_extra/tidy.conf /opt/tidy56/
+	# TODO add files from _extra
 
