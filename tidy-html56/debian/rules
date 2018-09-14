@@ -29,9 +29,11 @@ override_dh_installdocs:
 
 
 override_dh_auto_install:
-	echo -1------override_dh_auto_install
-	dh_auto_install	
+	echo ---override_dh_auto_install
+	dh_auto_install
 	cp debian/_extra/README.txt debian/tidy-html56/opt/tidy56/	
 	cp debian/_extra/tidy.conf debian/tidy-html56/opt/tidy56/
+	cp debian/copyright debian/tidy-html56/opt/tidy56/
+	cp debian/changelog debian/tidy-html56/opt/tidy56/
 
 

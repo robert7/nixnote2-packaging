@@ -1,9 +1,10 @@
 tidy-html56 (1:5.6.0-1) unstable; urgency=low
 
   * New upstream version 5.6.0
-  * Remove all patches; they have been merged upstream
+  * Removed all patches from 5.2.0 packaging; they have been merged upstream
   * For detailed changelog with list of authors see: http://binaries.html-tidy.org/release_notes/5.6.0.html
   * Package renamed to tidy-html56 avoid breaking system default "tidy", which may be already installed.
+  * Use "man /opt/tidy56/share/man/man1/tidy.1" to display man page.
   
  -- Robert Spiegel <nightingale7@gmail.com>  Thu, 13 Sep 2018 08:00:00 +0200
 
