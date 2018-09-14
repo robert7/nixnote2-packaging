@@ -5,9 +5,12 @@ Maintainer: Robert Spiegel <nightingale7@gmail.com>
 Source: https://github.com/robert7/nixnote2/
 
 Files: *
-Copyright: 2006-2017 Randy Baumgarte <randy@fbn.cx>
 Copyright: 2018-2018 Robert Spiegel <nightingale7@gmail.com>
 License: GPL-3
+
+Files: *
+Copyright: 2006-2017 Randy Baumgarte <randy@fbn.cx>
+License: GPL-2+
 
 Files: debian/*
 Copyright: 2006-2016 Randy Baumgarte <randy@fbn.cx>
