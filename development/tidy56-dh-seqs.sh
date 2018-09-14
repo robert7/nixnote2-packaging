@@ -16,8 +16,10 @@ echo Project dir: $PROJ_DIR
 cd build-tidy-html56/launchpad-recipe
 
 dh clean --without=build-stamp                        || error_exit "dh clean"
-dh build-arch --without=build-stamp                   || error_exit "dh build-arch"
-fakeroot dh install-arch --without=build-stamp        || error_exit "dh install-arch"
+
+#dh build-arch --without=build-stamp                   || error_exit "dh build-arch"
+
+fakeroot dh binary --without=build-stamp              || error_exit "dh binary"
 
 cd $CDIR
 

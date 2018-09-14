@@ -468,7 +468,3 @@ tidy (19981113-1) unstable; urgency=low
   * Initial Release.
 
  -- Johnie Ingram <johnie@debian.org>  Fri, 11 Dec 1998 01:01:32 -0500
-
-Local variables:
-mode: debian-changelog
-End:
