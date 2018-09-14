@@ -1,12 +1,13 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: nixnote2
-Upstream-Contact: Randy Baumgarte <randy@fbn.cx>
-Maintainer: Art Gallagher <launchpad@artmg.org>
-Source: https://github.com/baumgarr/nixnote2/
+Upstream-Contact: Robert Spiegel <nightingale7@gmail.com>
+Maintainer: Robert Spiegel <nightingale7@gmail.com>
+Source: https://github.com/robert7/nixnote2/
 
 Files: *
-Copyright: 2006-2016 Randy Baumgarte <randy@fbn.cx>
-License: GPL-2+
+Copyright: 2006-2017 Randy Baumgarte <randy@fbn.cx>
+Copyright: 2018-2018 Robert Spiegel <nightingale7@gmail.com>
+License: GPL-3
 
 Files: debian/*
 Copyright: 2006-2016 Randy Baumgarte <randy@fbn.cx>
@@ -117,7 +118,7 @@ License: BSD-3-clause
  OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
  OF THE POSSIBILITY OF SUCH DAMAGE.
 
-License: GPL-2
+License: GPL-3
  This program is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License version 2 as
  published by the Free Software Foundation.
@@ -133,7 +134,7 @@ License: GPL-2
  .
  On Debian systems, the full text of the GNU General Public
  License version 2 can be found in the file
- `/usr/share/common-licenses/GPL-2'.
+ /usr/share/common-licenses/GPL-3.
 
 License: Expat
  Permission is hereby granted, free of charge, to any person obtaining a copy
