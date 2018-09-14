@@ -13,7 +13,20 @@ PROJ_DIR=`pwd`
 echo Project dir: $PROJ_DIR
 . ${PROJ_DIR}/development/common-include.sh
 
-cd build-tidy-html5/launchpad-recipe
+RECIPE_NAME=$1
+if [ -z "${RECIPE_NAME}" ] || [ ! -d "${RECIPE_NAME}" ]; then
+  echo "1st param must me recipe name (directory)"
+  exit 1
+fi
+
+DIR_WITH_RECIPE=build-${RECIPE_NAME}/launchpad-recipe
+if [ ! -d ${DIR_WITH_RECIPE} ]; then
+  echo "Directory with recipe content doesn't exist (you should run run-recipe.sh before)"
+  exit 1
+fi
+
+
+cd ${DIR_WITH_RECIPE}
 
 dh clean --without=build-stamp                        || error_exit "dh clean"
 
