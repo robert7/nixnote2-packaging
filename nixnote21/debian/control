@@ -1,7 +1,7 @@
 Source: nixnote2
 Section: utils
 Priority: optional
-Maintainer: Art Gallagher <launchpad@artmg.org>
+Maintainer: Robert Spiegel <nightingale7@gmail.com>
 Build-Depends:
  debhelper (>= 9),
  default-jdk,
@@ -14,20 +14,18 @@ Build-Depends:
  libpoppler-qt5-dev,
  libqt5webkit5-dev,
  libswscale-dev,
- libtidy-dev,
+ html-tidy56,
  qml,
  qt5-qmake,
  qtbase5-dev,
  qttools5-dev-tools,
 Standards-Version: 3.9.8
-Homepage: https://github.com/baumgarr/nixnote2
-Vcs-Git: https://github.com/artmg/nixnote2-packaging.git
-Vcs-Browser: https://github.com/artmg/nixnote2-packaging
+Homepage: https://github.com/robert7/nixnote2
 
 Package: nixnote2
 Architecture: any
 Depends:
- tidy,
+ html-tidy56,
  ${java:Depends},
  ${misc:Depends},
  ${shlibs:Depends},
@@ -44,7 +42,8 @@ Description: Open Source Evernote client
  Once known as "NeverNote", this software was rewritten in C++/Qt to
  provide a native user experience.
  .
- This PPA package adds debian folder files, partly forked from 
- https://anonscm.debian.org/git/collab-maint/nixnote2.git 
- with deep gratitude to 
- Maintainer: Boyuan Yang <073plan@gmail.com>
+ This PPA package provides version 2.1+.
+ Partly forked from https://anonscm.debian.org/git/collab-maint/nixnote2.git
+ with deep gratitude to maintainer: Boyuan Yang <073plan@gmail.com>.
+ Further packaging forked from https://github.com/artmg/nixnote2-packaging
+ by Art Gallagher <launchpad@artmg.org>.
