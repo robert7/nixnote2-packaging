@@ -1,21 +1,18 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: nixnote2
-Upstream-Contact: Robert Spiegel <nightingale7@gmail.com>
 Maintainer: Robert Spiegel <nightingale7@gmail.com>
 Source: https://github.com/robert7/nixnote2/
 
 Files: *
-Copyright: 2018-2018 Robert Spiegel <nightingale7@gmail.com>
+Copyright: 2006-2017 Randy Baumgarte <randy@fbn.cx>,
+           2018-2018 Robert Spiegel <nightingale7@gmail.com>
 License: GPL-3
 
-Files: *
-Copyright: 2006-2017 Randy Baumgarte <randy@fbn.cx>
-License: GPL-2+
-
 Files: debian/*
-Copyright: 2006-2016 Randy Baumgarte <randy@fbn.cx>
-           2016 Boyuan Yang <073plan@gmail.com>
-           2015-2017 Art Gallagher <launchpad@artmg.org>
+Copyright: 2006-2016 Randy Baumgarte <randy@fbn.cx>,
+           2016 Boyuan Yang <073plan@gmail.com>,
+           2015-2017 Art Gallagher <launchpad@artmg.org>,
+           2018-2018 Robert Spiegel <nightingale7@gmail.com>
 License: GPL-2+
 
 Files: images/purple-theme/*
