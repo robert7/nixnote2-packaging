@@ -6,15 +6,13 @@ Build-Depends:
  debhelper (>= 9),
  default-jdk,
  javahelper,
- libavcodec-dev,
- libavformat-dev,
  libboost-dev,
  libcurl4-openssl-dev | libcurl-dev | libcurl4-nss-dev | libcurl4-gnutls-dev,
  libhunspell-dev,
  libpoppler-qt5-dev,
  libqt5webkit5-dev,
  libswscale-dev,
- html-tidy56,
+ tidy-html56,
  qml,
  qt5-qmake,
  qtbase5-dev,
@@ -25,7 +23,7 @@ Homepage: https://github.com/robert7/nixnote2
 Package: nixnote2
 Architecture: any
 Depends:
- html-tidy56,
+ tidy-html56,
  ${java:Depends},
  ${misc:Depends},
  ${shlibs:Depends},
