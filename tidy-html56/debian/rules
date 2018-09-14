@@ -12,9 +12,12 @@ override_dh_auto_configure:
 		-DTIDY_COMPAT_HEADERS:BOOL=YES \
 		-DTIDY_CONFIG_FILE:STRING=/etc/tidy.conf \
 		-DTIDY_USER_CONFIG_FILE:STRING=~/.tidyrc \
-		-DCMAKE_INSTALL_PREFIX=/opt/tidy56
-		-DCMAKE_LIBRARY_PATH=/opt/tidy56
-		-DCMAKE_PREFIX_PATH=/opt/tidy56
+		-DCMAKE_INSTALL_PREFIX=/opt/tidy56 \
+		-DCMAKE_LIBRARY_PATH=/opt/tidy56 \
+		-DCMAKE_PREFIX_PATH=/opt/tidy56 \
+		-DCMAKE_INSTALL_RPATH=/opt/tidy56/lib 
+		#-DBUILD_WITH_INSTALL_RPATH=true
+		#-DCMAKE_SKIP_RPATH=ON
 
 
 override_dh_installchangelogs:
