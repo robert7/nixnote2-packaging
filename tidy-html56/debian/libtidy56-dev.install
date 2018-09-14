@@ -1,5 +1,0 @@
-debian/changelog /opt/tidy56/doc/
-debian/copyright /opt/tidy56/doc/
-usr/include/* /opt/tidy56/include/
-usr/lib/libtidy.so* /opt/tidy56/lib/
-usr/lib/libtidys.a /opt/tidy56/lib/
