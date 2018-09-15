@@ -44,7 +44,7 @@ QMAKE_OPTIONS += QMAKE_CXXFLAGS_RELEASE='$(CFLAGS)' \
 	dh $@ --buildsystem=qmake --with javahelper
 
 override_dh_auto_configure:
-	qmake $(QMAKE_OPTIONS)
+	env PKG_CONFIG_PATH=/opt/tidy56/lib/pkgconfig qmake $(QMAKE_OPTIONS)
 
 # update translation files before build
 override_dh_auto_build:
