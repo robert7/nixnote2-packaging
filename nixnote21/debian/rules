@@ -55,6 +55,8 @@ override_dh_auto_configure:
 override_jh_build:
 	jh_build -N --main=cx.fbn.encrypt.Crypto --javacopts="-source 1.6 -target 1.6"
 
+override_dh_installchangelogs:
+	echo override_dh_installchangelogs
 
 override_dh_clean:
 	dh_clean install translations/*.qm
