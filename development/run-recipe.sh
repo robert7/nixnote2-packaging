@@ -1,6 +1,6 @@
 #!/bin/bash
 
-USE_DISTRIBUTION=bionic
+
 CDIR=`pwd`
 echo Current dir: $CDIR
 DEV_DIR=`dirname $0`
@@ -14,7 +14,10 @@ if [ -z "${RECIPE_NAME}" ] || [ ! -d "${RECIPE_NAME}" ]; then
   echo "1st param must me recipe name (directory)"
   exit 1
 fi
-
+USE_DISTRIBUTION=$2
+if [ -z "${USE_DISTRIBUTION}" ]; then
+  USE_DISTRIBUTION=bionic
+fi
 
 ./development/clean.sh
 
