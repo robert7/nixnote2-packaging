@@ -3,8 +3,6 @@
 # output every command that modifies files on the build system.
 #export DH_VERBOSE = 1
 
-
-
 ifneq (,$(filter noopt,$(DEB_BUILD_OPTIONS)))
   CFLAGS = -O0 -g
 endif
@@ -51,58 +49,16 @@ override_dh_auto_configure:
 	find /usr/lib|grep pkgconfig || true
 	env PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig:/usr/lib/i386-linux-gnu/pkgconfig:/opt/tidy56/lib/pkgconfig qmake $(QMAKE_OPTIONS)
 
-# update translation files before build
-#override_dh_auto_build:
-#	lrelease NixNote21.pro -compress -nounfinished
-#	dh_auto_build
-#	# remove strip on RFE - https://github.com/artmg/nixnote2-packaging/issues/26
-#	#strip --strip-all nixnote2
-#	# embed the build date into the Help / About dialog to assist with tracking issues
-#	#sed -i "s/__VERSION__/nixnote2-daily+$(shell date +%Y%m%d)/" help/about.html
 
 # build java jar file from source, discard upstream jar file
 override_jh_build:
 	jh_build -N --main=cx.fbn.encrypt.Crypto --javacopts="-source 1.6 -target 1.6"
 
 
-# cannot rely on getting changelog here as it must be copied by the recipe to determine {debversion}
-#override_dh_installchangelogs:
-#	# upstream changelog is in root above debian folder
-#	dh_installchangelogs -k ../changelog.txt
-
-# handle changelog.txt manually since dh_installchangelogs won't do
-# that automatically
-override_dh_installchangelogs:
-	dh_installchangelogs changelog.txt
-
 override_dh_clean:
 	dh_clean install translations/*.qm
 
-# pdf document really don't need compression
-override_dh_compress:
-	dh_compress -X.pdf
-
-# reinstate previous install code
-#override_dh_auto_install:
-#	dh_auto_install
-
-
-
-	##cp man/nixnote2.1 debian/nixnote2/usr/share/man/man1/nixnote2.1
-	##gzip -9 debian/nixnote2/usr/share/man/man1/nixnote2.1
-	## when making the 'Makefile.Release install' this Install Extra from project file
-	## does not prepend the images folder with <<PKGBUILDDIR>>
-	## pixmap.extra = cp images/windowIcon.png images/nixnote2.png
-	## so do the copy manually here
-	##mkdir -p debian/nixnote2/usr/share/pixmaps
-	##cp images/windowIcon.png debian/nixnote2/usr/share/pixmaps/nixnote2.png
 
 # never install ts translation file
 override_dh_install:
 	dh_install -X*.ts
-
-# replace __VERSION__ placeholder with source version name
-#override_dh_installdocs:
-#	dh_installdocs
-
-#find debian/$(_PKGNAME)/ -type f -exec sed -i 's/__VERSION__/$(_VERSION)/g' {} + || true
