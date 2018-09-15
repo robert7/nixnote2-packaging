@@ -44,16 +44,21 @@ QMAKE_OPTIONS += QMAKE_CXXFLAGS_RELEASE='$(CFLAGS)' \
 	dh $@ --buildsystem=qmake --with javahelper
 
 override_dh_auto_configure:
-	env PKG_CONFIG_PATH=/opt/tidy56/lib/pkgconfig qmake $(QMAKE_OPTIONS)
+	echo PKG_CONFIG_PATH=$PKG_CONFIG_PATH
+	echo looking for poppler-qt
+	find /usr/lib|grep poppler-qt
+	echo looking for pkgconfig
+	find /usr/lib|grep pkgconfig
+	env PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/opt/tidy56/lib/pkgconfig qmake $(QMAKE_OPTIONS)
 
 # update translation files before build
-override_dh_auto_build:
-	lrelease NixNote21.pro -compress -nounfinished
-	dh_auto_build
-	# remove strip on RFE - https://github.com/artmg/nixnote2-packaging/issues/26
-	#strip --strip-all nixnote2
-	# embed the build date into the Help / About dialog to assist with tracking issues
-	sed -i "s/__VERSION__/nixnote2-daily+$(shell date +%Y%m%d)/" help/about.html
+#override_dh_auto_build:
+#	lrelease NixNote21.pro -compress -nounfinished
+#	dh_auto_build
+#	# remove strip on RFE - https://github.com/artmg/nixnote2-packaging/issues/26
+#	#strip --strip-all nixnote2
+#	# embed the build date into the Help / About dialog to assist with tracking issues
+#	#sed -i "s/__VERSION__/nixnote2-daily+$(shell date +%Y%m%d)/" help/about.html
 
 # build java jar file from source, discard upstream jar file
 override_jh_build:
