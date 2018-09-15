@@ -49,7 +49,7 @@ override_dh_auto_configure:
 	find /usr/lib|grep poppler-qt || true
 	echo looking for pkgconfig
 	find /usr/lib|grep pkgconfig || true
-	env PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/opt/tidy56/lib/pkgconfig qmake $(QMAKE_OPTIONS)
+	env PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig:/usr/lib/i386-linux-gnu/pkgconfig:/opt/tidy56/lib/pkgconfig qmake $(QMAKE_OPTIONS)
 
 # update translation files before build
 #override_dh_auto_build:
