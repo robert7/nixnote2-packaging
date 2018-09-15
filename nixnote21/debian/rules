@@ -44,11 +44,11 @@ QMAKE_OPTIONS += QMAKE_CXXFLAGS_RELEASE='$(CFLAGS)' \
 	dh $@ --buildsystem=qmake --with javahelper
 
 override_dh_auto_configure:
-	echo PKG_CONFIG_PATH=$PKG_CONFIG_PATH
+	echo PKG_CONFIG_PATH=$(PKG_CONFIG_PATH)
 	echo looking for poppler-qt
-	find /usr/lib|grep poppler-qt
+	find /usr/lib|grep poppler-qt || true
 	echo looking for pkgconfig
-	find /usr/lib|grep pkgconfig
+	find /usr/lib|grep pkgconfig || true
 	env PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/opt/tidy56/lib/pkgconfig qmake $(QMAKE_OPTIONS)
 
 # update translation files before build

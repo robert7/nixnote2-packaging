@@ -12,5 +12,5 @@ cd nixnote2-packaging
 ./development/run-recipe.sh nixnote21 bionic
 
 # if OK, then part #2:
-./development/run-dh-seq.sh nixnote21
+./development/run-dh-seq.sh nixnote2d      d
 ```
