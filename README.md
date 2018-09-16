@@ -11,7 +11,7 @@ sudo apt-get update
 sudo apt -y install dh-make git git-build-recipe javahelper default-jdk \
    libboost-dev libcurl4-openssl-dev libhunspell-dev libpoppler-qt5-dev \
    libqt5webkit5-dev libswscale-dev tidy-html56 qml qt5-qmake qtbase5-dev \
-   qttools5-dev-tools git
+   qttools5-dev-tools build-essential pkg-config
 
 git clone https://github.com/robert7/nixnote2-packaging.git
 cd nixnote2-packaging
