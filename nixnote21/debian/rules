@@ -55,3 +55,6 @@ override_dh_installchangelogs:
 override_dh_usrlocal:
 	echo override_dh_usrlocal - skip
 
+# due to order issue, translations don't get installed by qmake
+override_dh_clean:
+	dh_clean install translations/*.qm
