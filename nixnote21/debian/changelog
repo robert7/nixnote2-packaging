@@ -1,7 +1,7 @@
 nixnote21 (2.1.0-beta4a) unstable; urgency=low
   * Make the sync shortcut key global to all app windows, and add sync toolbar button to all editor windows
     Thanks to https://github.com/MRC01
-  -- Robert Spiegel <nightingale7@gmail.com>  Tue, 18 Sep 2018 12:00:00 -0400
+ -- Robert Spiegel <nightingale7@gmail.com>  Tue, 18 Sep 2018 12:00:00 -0400
 
 nixnote21 (2.1.0-beta3) unstable; urgency=low
   * Added few sort options (menu View)
