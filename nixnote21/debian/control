@@ -19,6 +19,7 @@ Build-Depends:
  qt5-qmake,
  qtbase5-dev,
  qttools5-dev-tools,
+ git
 Standards-Version: 3.9.8
 Homepage: https://github.com/robert7/nixnote2
 
