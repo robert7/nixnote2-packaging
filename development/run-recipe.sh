@@ -21,7 +21,8 @@ fi
 
 ./development/clean.sh
 
-git-build-recipe --allow-fallback-to-native --distribution ${USE_DISTRIBUTION} ./${RECIPE_NAME}/launchpad-recipe build-${RECIPE_NAME}
+git-build-recipe --allow-fallback-to-native --distribution ${USE_DISTRIBUTION} \
+   ./${RECIPE_NAME}/launchpad-recipe build-${RECIPE_NAME} || error_exit "git-build-recipe"
 
 cd $CDIR
 
