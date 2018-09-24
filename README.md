@@ -1,11 +1,13 @@
-# Debian packaging for nixnote21 
+# Debian packaging for nixnote2
 
-..work in progress :) as I try to figure out the magic behind debian packages
+Note that packaging for nixnote2 itselft is not moved to main repo: https://github.com/robert7/nixnote2
 
-Test run packaging (aproximate local simulation):
+Here remains: recipes for libtidy 5.6 & helper scripts.
+
+Test run packaging (aproximate local simulation; probably quite naive version, but works someway :) ):
 ```bash
-# ppa is used for tidy-html56
-sudo add-apt-repository ppa:robert7/nixnote21
+# ppa is used for tidy-html56 (see https://github.com/robert7/nixnote2/wiki/NixNote-PPA)
+sudo add-apt-repository ppa:nixnote/nixnote2-stable
 sudo apt-get update
 
 sudo apt -y install dh-make git git-build-recipe javahelper default-jdk \
@@ -17,8 +19,10 @@ git clone https://github.com/robert7/nixnote2-packaging.git
 cd nixnote2-packaging
 
 # test run part #1
-./development/run-recipe.sh nixnote21 bionic
+./development/run-recipe.sh nixnote2 bionic
 
 # if OK, then part #2:
-./development/run-dh-seqs.sh nixnote21
+./development/run-dh-seqs.sh nixnote2
+
+# there is also all.sh for both parts
 ```
