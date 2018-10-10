@@ -1,4 +1,4 @@
-Tidy documentation can be found in the tidy manpage (use "man /usr/lib/nixnote2/share/man/man1/tidy.1 to display man page).
+Tidy documentation can be found in the tidy manpage (use "man /usr/share/doc/nixnote2/tidy.1 to display man page).
 
 More documentation can be found at the following links:
 * Tidy - http://www.html-tidy.org/documentation/
