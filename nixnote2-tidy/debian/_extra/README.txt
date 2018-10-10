@@ -1,4 +1,4 @@
-Tidy documentation can be found in the tidy manpage (use "man /opt/tidy56/share/man/man1/tidy.1 to display man page).
+Tidy documentation can be found in the tidy manpage (use "man /usr/lib/nixnote2/share/man/man1/tidy.1 to display man page).
 
 More documentation can be found at the following links:
 * Tidy - http://www.html-tidy.org/documentation/
@@ -7,8 +7,8 @@ More documentation can be found at the following links:
 
 Config file is /etc/tidy.conf or ~/.tidyrc
 
-This is simplified packaging, where all files are installed in /opt/tidy56 and there is only one
-package "tidy-html56". This contains binary and libraries (both runtime and development).
+This is simplified packaging, where all files are installed in /usr/lib/nixnote2 and there is only one
+package "nixnote2-tidy". This contains binary and libraries (both runtime and development).
 The idea is, that the package can be easily installed on all supported Ubuntu versions
 without risking conflict with possibly present system default tidy.
 

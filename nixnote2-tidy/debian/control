@@ -1,4 +1,4 @@
-Source: tidy-html56
+Source: nixnote2-tidy
 Section: web
 Priority: optional
 Maintainer: Robert Spiegel <nightingale7@gmail.com>
@@ -6,7 +6,7 @@ Build-Depends: debhelper (>= 9), xsltproc, cmake
 Standards-Version: 3.9.8
 Homepage: http://www.html-tidy.org/
 
-Package: tidy-html56
+Package: nixnote2-tidy
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: HTML/XML syntax checker and reformatter
@@ -15,8 +15,8 @@ Description: HTML/XML syntax checker and reformatter
  standards. Tidy is a product of the World Wide Web Consortium and the HTML
  Tidy Advocacy Community Group.
  --
- This is simplified packaging, where all files are installed in /opt/tidy56 and there is only one
- package "tidy-html56". This contains binary and libraries (both runtime and development).
+ This is simplified packaging, where all files are installed in /usr/lib/nixnote2 and there is only one
+ package "nixnote2-tidy". This contains binary and libraries (both runtime and development).
  The idea is, that the package can be easily installed on all supported Ubuntu version
  without conflict with possibly present system default tidy.
  Source: https://github.com/htacg/tidy-html5/releases

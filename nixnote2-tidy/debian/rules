@@ -12,10 +12,10 @@ override_dh_auto_configure:
 		-DTIDY_COMPAT_HEADERS:BOOL=YES \
 		-DTIDY_CONFIG_FILE:STRING=/etc/tidy.conf \
 		-DTIDY_USER_CONFIG_FILE:STRING=~/.tidyrc \
-		-DCMAKE_INSTALL_PREFIX=/opt/tidy56 \
-		-DCMAKE_LIBRARY_PATH=/opt/tidy56 \
-		-DCMAKE_PREFIX_PATH=/opt/tidy56 \
-		-DCMAKE_INSTALL_RPATH=/opt/tidy56/lib 
+		-DCMAKE_INSTALL_PREFIX=/usr/lib/nixnote2 \
+		-DCMAKE_LIBRARY_PATH=/usr/lib/nixnote2 \
+		-DCMAKE_PREFIX_PATH=/usr/lib/nixnote2 \
+		-DCMAKE_INSTALL_RPATH=/usr/lib/nixnote2/lib
 
 #-DBUILD_WITH_INSTALL_RPATH=true
 #-DCMAKE_SKIP_RPATH=ON
@@ -31,9 +31,9 @@ override_dh_installdocs:
 override_dh_auto_install:
 	echo ---override_dh_auto_install
 	dh_auto_install
-	cp debian/_extra/README.txt debian/tidy-html56/opt/tidy56/	
-	cp debian/_extra/tidy.conf debian/tidy-html56/opt/tidy56/
-	cp debian/copyright debian/tidy-html56/opt/tidy56/
-	cp debian/changelog debian/tidy-html56/opt/tidy56/
+	cp debian/_extra/README.txt debian/nixnote2-tidy/usr/lib/nixnote2/
+	cp debian/_extra/tidy.conf debian/nixnote2-tidy/usr/lib/nixnote2/
+	cp debian/copyright debian/nixnote2-tidy/usr/lib/nixnote2/
+	cp debian/changelog debian/nixnote2-tidy/usr/lib/nixnote2/
 
 

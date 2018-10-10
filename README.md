@@ -6,13 +6,13 @@ Here remains: recipes for libtidy 5.6 & helper scripts.
 
 Test run packaging (aproximate local simulation; probably quite naive version, but works someway :) ):
 ```bash
-# ppa is used for tidy-html56 (see https://github.com/robert7/nixnote2/wiki/NixNote-PPA)
+# ppa is used for nixnote2-tidy (see https://github.com/robert7/nixnote2/wiki/NixNote-PPA)
 sudo add-apt-repository ppa:nixnote/nixnote2-stable
 sudo apt-get update
 
 sudo apt -y install dh-make git git-build-recipe javahelper default-jdk \
    libboost-dev libcurl4-openssl-dev libhunspell-dev libpoppler-qt5-dev \
-   libqt5webkit5-dev libswscale-dev tidy-html56 qml qt5-qmake qtbase5-dev \
+   libqt5webkit5-dev libswscale-dev nixnote2-tidy qml qt5-qmake qtbase5-dev \
    qttools5-dev-tools build-essential pkg-config
 
 git clone https://github.com/robert7/nixnote2-packaging.git
