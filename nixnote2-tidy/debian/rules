@@ -31,10 +31,11 @@ override_dh_installdocs:
 override_dh_auto_install:
 	echo ---override_dh_auto_install
 	dh_auto_install
+	mkdir -p debian/nixnote2-tidy/usr/share/doc/nixnote2
 	cp debian/_extra/README-tidy.txt debian/nixnote2-tidy/usr/share/doc/nixnote2/
 	cp debian/_extra/tidy.conf debian/nixnote2-tidy/usr/share/doc/nixnote2/
 	cp debian/copyright debian/nixnote2-tidy/usr/share/doc/nixnote2/copyright-tidy.txt
-	cp debian/changelog debian/nixnote2-tidy/copyright/changelog-tidy.txt
+	cp debian/changelog debian/nixnote2-tidy/usr/share/doc/nixnote2/changelog-tidy.txt
 
 
 
