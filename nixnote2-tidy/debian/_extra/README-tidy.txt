@@ -1,7 +1,5 @@
-Tidy documentation can be found in the tidy manpage (use "man /usr/share/doc/nixnote2/tidy.1 to display man page).
-
-More documentation can be found at the following links:
-* Tidy - http://www.html-tidy.org/documentation/
+Tidy documentation can be found at the following links:
+* Tidy -
 * Accessibility - http://www.html-tidy.org/accessibility/
 * Source code: https://github.com/htacg/tidy-html5
 

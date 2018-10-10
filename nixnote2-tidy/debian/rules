@@ -36,6 +36,11 @@ override_dh_auto_install:
 	cp debian/_extra/tidy.conf debian/nixnote2-tidy/usr/share/doc/nixnote2/
 	cp debian/copyright debian/nixnote2-tidy/usr/share/doc/nixnote2/copyright-tidy.txt
 	cp debian/changelog debian/nixnote2-tidy/usr/share/doc/nixnote2/changelog-tidy.txt
+	mv tmp/usr/lib/nixnote2/lib debian/nixnote2-tidy/usr/lib/nixnote2/tidy
+	mv tmp/usr/lib/nixnote2/include debian/nixnote2-tidy/usr/include/nixnote2/tidy
+	cp debian/_extra/tidy.pc debian/nixnote2-tidy/usr/lib/nixnote2/tidy/pkgconfig
+
+
 
 
 

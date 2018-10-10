@@ -1,0 +1,11 @@
+prefix=/usr/lib/nixnote2/tidy
+exec_prefix=${prefix}
+libdir=${exec_prefix}
+includedir=/usr/include/nixnote2/tidy
+
+Name: tidy
+Description: tidy - HTML syntax checker
+URL: http://www.html-tidy.org
+Version: 5.6.0
+Libs: -L${libdir} -ltidy
+Cflags: -I${includedir}
