@@ -1,7 +1,7 @@
 prefix=/usr/lib/nixnote2/tidy
 exec_prefix=${prefix}
 libdir=${exec_prefix}
-includedir=/usr/include/nixnote2/tidy
+includedir=/usr/include/nixnote2
 
 Name: tidy
 Description: tidy - HTML syntax checker
