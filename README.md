@@ -1,10 +1,13 @@
 # Debian packaging for nixnote2
 
-Note that packaging for nixnote2 itselft is not moved to main repo: https://github.com/robert7/nixnote2
+Note that packaging for nixnote2 itself is now moved to main repo: https://github.com/robert7/nixnote2
 
-Here remains: recipes for libtidy 5.6 & helper scripts.
+Here remains:
 
-Test run packaging (aproximate local simulation; probably quite naive version, but works someway :) ):
+* recipes for libtidy 5.6 & helper scripts.
+* Qt webkit binary build (with docker)
+
+Test run packaging (approximate local simulation; probably quite naive version, but works someway :) ):
 ```bash
 # ppa is used for nixnote2-tidy (see https://github.com/robert7/nixnote2/wiki/NixNote-PPA)
 sudo add-apt-repository ppa:nixnote/nixnote2-stable
